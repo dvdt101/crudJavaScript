@@ -1,0 +1,59 @@
+html {
+  font-family: Arial;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body > ul {
+  border-top: 1px solid #ddd;
+  margin: 0;
+  flex: 1;
+  padding: 5px;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+body > ul > li {
+  font-size: 0.9rem;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+  width: 200px;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+body > ul > li.selected {
+  font-size: 1rem;
+  border-color: rgb(47, 13, 92);
+  background-color: rgb(26, 103, 219);
+  color: white;
+}
+
+body > form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 10px;
+  justify-content: center;
+}
+body > form > * {
+  padding: 5px 10px;
+}
+
+input[type="number"] {
+  width: 60px;
+}
+button {
+  cursor: pointer;
+}
