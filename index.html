@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="./css/style.css"
+    media="screen"
+  />
+  <title>crud</title>
+</head>
+<body>
+  <div id="errors"></div>
+  <form>
+    <label>Name: <input type="text" name="name" /></label>
+    <label>Salary: <input type="number" name="Salary" /></label>
+    <label>
+      Role:
+      <select name="role_id"></select>
+    </label>
+    <div>
+      <button type="button" id="bdelete">Delete</button>
+      <button type="button" id="bcancel">Cancel</button>
+      <button type="submit" id="bsubmit">Update</button>
+    </div>
+  </form>
+  <ul></ul>
+  <script src="./js/http.js"></script>
+  <script src="./js/script.js"></script>
+</body>
