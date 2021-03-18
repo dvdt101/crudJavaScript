@@ -1,0 +1,67 @@
+html {
+  font-family: Arial;
+  height: 100%;
+  width: 100%;
+}
+fieldset {
+  margin: 5px;
+}
+body {
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  margin: 0;
+  justify-content: center;
+  overflow: hidden;
+}
+div {
+  padding: 2px;
+  margin: 2px;
+}
+div.left {
+  float: left;
+  width: 20%;
+  height: 100%;
+  margin: 0;
+}
+div.right {
+  float: right;
+  overflow-y: auto;
+  width: 78%;
+  height: 100%;
+  margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  /*Mobile*/
+  div.right {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  div.left {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  body {
+    overflow: scroll;
+  }
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

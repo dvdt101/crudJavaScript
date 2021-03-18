@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Listagem de registros</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/liststyle.css" />
+  </head>
+  <body>
+    <div class="left">
+      <h2>Options</h2>
+      <label
+        >sort by:
+        <select>
+          <option>Nome ascendente</option>
+          <option>Nome descendente</option>
+          <option>Salário ascendente</option>
+          <option>Salário descendente.</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Filter by holes</legend>
+        <label><input type="checkbox" id="1" />Database Administrator</label
+        ><br />
+        <label><input type="checkbox" id="2" />Senior QA Analyst</label><br />
+        <label><input type="checkbox" id="3" />Junior QA Analyst</label><br />
+        <label><input type="checkbox" id="4" />Senior Web Designer</label><br />
+        <label><input type="checkbox" id="5" />Junior Web Designer</label><br />
+        <label><input type="checkbox" id="6" />Junior Web Developer</label
+        ><br />
+        <label><input type="checkbox" id="7" />Senior Web Developer</label
+        ><br />
+        <label><input type="checkbox" id="8" />Data Analyst</label><br />
+        <label><input type="checkbox" id="9" />Jr Devops Engineer</label><br />
+        <label><input type="checkbox" id="10" />Senior Devops Engineer</label
+        ><br />
+        <label><input type="checkbox" id="11" />Network Administrator</label
+        ><br />
+        <label><input type="checkbox" id="12" />Project Manager</label><br />
+      </fieldset>
+    </div>
+    <div class="right">
+      <h2>Employees</h2>
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Salary</th>
+        </thead>
+        <tbody id="conteudoTabela"></tbody>
+      </table>
+    </div>
+    <script src="./js/http.js"></script>
+    <script src="./js/listScript.js"></script>
+  </body>
+</html>
