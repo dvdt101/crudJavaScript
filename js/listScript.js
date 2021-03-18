@@ -1,9 +1,12 @@
 let conteudoTabela = document.getElementById("conteudoTabela");
 let employees = [];
 let roles = [];
+let sortSelect = document.getElementById("sort");
 
 async function init() {
   [employees, roles] = await Promise.all([listEmployees(), listRoles()]);
+  employees.sort(arraySortNameAscending);
+  sortSelect.addEventListener("change", () => selectedSort());
   renderTable();
 }
 
@@ -28,4 +31,56 @@ function renderTable() {
   }
 }
 
+function selectedSort() {
+  if (sortSelect.value == 1) {
+    employees.sort(arraySortNameAscending);
+  } else if (sortSelect.value == 2) {
+    employees.sort(arraySortNameDownward);
+  } else if (sortSelect.value == 3) {
+    employees.sort(arraySortSalaryAscending);
+  } else if (sortSelect.value == 4) {
+    employees.sort(arraySortSalaryDownward);
+  }
+  renderTable();
+}
+
+function arraySortNameAscending(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+
+function arraySortNameDownward(a, b) {
+  if (a.name > b.name) {
+    return -1;
+  }
+  if (a.name < b.name) {
+    return 1;
+  }
+  return 0;
+}
+
+function arraySortSalaryAscending(a, b) {
+  if (a.salary < b.salary) {
+    return -1;
+  }
+  if (a.salary > b.salary) {
+    return 1;
+  }
+  return 0;
+}
+
+function arraySortSalaryDownward(a, b) {
+  if (a.salary > b.salary) {
+    return -1;
+  }
+  if (a.salary < b.salary) {
+    return 1;
+  }
+  return 0;
+}
 init();
